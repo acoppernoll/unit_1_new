@@ -109,15 +109,15 @@ function addEvents(){
 
 //call the initialize function when the document has loaded
 $(document).ready(initialize);
-
+//appends callback response as string value after string "GeoJSON data: "
 function debugCallback(response){
 
 	$('#mydiv').append('GeoJSON data: ' + JSON.stringify(response));
 };
-
+//introduces Ajax to script library
 function debugAjax(){
 
-
+	
 	$.ajax("data/MegaCities.geojson", {
 		dataType: "json",
 		success: debugCallback
